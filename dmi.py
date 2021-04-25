@@ -1,5 +1,8 @@
 # Directional Movement Index
 
+# There are some variations between this indicator and the one on TV,
+# should you find a fix for this please open a PR / Issue or message me on Discord
+
 def dmi(self, high: Series, low: Series, close: Series, length: int) -> DataFrame:
     trur = self.rma(pd.Series(ta.TRANGE(high, low, close)), length)
 
